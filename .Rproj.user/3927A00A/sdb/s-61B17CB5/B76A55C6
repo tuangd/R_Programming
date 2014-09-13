@@ -1,0 +1,17 @@
+{
+    "contents" : "complete <- function(directory, id = 1:332){\n        mypath <- file.path(getwd(), directory)\n        nobs <- vector()\n        for (i in id) {\n                mytempdata <- data.frame()\n                newfilename <- sprintf(\"%03d.csv\", i)\n                newfile <- paste(mypath, newfilename, sep=\"/\")\n                mytempdata <- read.csv(newfile, head=TRUE)\n                countC <- sum(complete.cases(mytempdata))\n                nobs <- c(nobs, countC)\n                rm(mytempdata,countC)\n                \n        }\n        myDataFrame <- data.frame(id , nobs)\n        print(myDataFrame)\n}",
+    "created" : 1410583222839.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4062541580",
+    "id" : "B76A55C6",
+    "lastKnownWriteTime" : 1410597881,
+    "path" : "C:/Users/Tuang/Desktop/Coursera/complete.R",
+    "project_path" : "complete.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : true,
+    "type" : "r_source"
+}

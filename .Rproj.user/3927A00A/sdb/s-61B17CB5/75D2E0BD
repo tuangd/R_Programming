@@ -1,0 +1,17 @@
+{
+    "contents" : "myfunction <- function() {\n        x <- rnorm(100)\n        mean(x)\n}\n\nsecond <- function(x) {\n        x + rnorm(length(x))\n}\n\ncolumnmean <- function(y, removeNA=TRUE){\n        nc <- ncol(y)\n        means <- numeric(nc)\n        for (i in 1:nc) {\n                means[i] <- mean(y[,i], na.rm = removeNA)\n                \n        }\n        means\n}\n",
+    "created" : 1409613168359.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "457144639",
+    "id" : "75D2E0BD",
+    "lastKnownWriteTime" : 1410597953,
+    "path" : "C:/Users/Tuang/Desktop/Coursera/mycode.R",
+    "project_path" : "mycode.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,17 @@
+{
+    "contents" : "pollutantmean <- function(directory, pollutant, id = 1:332){\n        mypath <- file.path(getwd(), directory)\n        myDataFrame <- data.frame()\n        for (i in id) {\n                newfilename <- sprintf(\"%03d.csv\", i)\n                newfile <- paste(mypath, newfilename, sep=\"/\")\n                myDataFrame <- rbind(myDataFrame, read.csv(newfile, header=TRUE))\n        }\n        print(mean(myDataFrame[[pollutant]], na.rm=TRUE))\n}",
+    "created" : 1410580057371.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1056427480",
+    "id" : "67E52BFB",
+    "lastKnownWriteTime" : 1410592322,
+    "path" : "C:/Users/Tuang/Desktop/Coursera/pollutantmean.R",
+    "project_path" : "pollutantmean.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : true,
+    "type" : "r_source"
+}

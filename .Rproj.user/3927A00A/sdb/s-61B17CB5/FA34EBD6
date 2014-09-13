@@ -1,0 +1,17 @@
+{
+    "contents" : "corr <- function(directory, threshold = 0){\n        mypath <- file.path(getwd(), directory)\n        myfiles <- dir(mypath,pattern=\".csv\")\n        corrAnswer <- numeric()\n        for (i in 1:length(myfiles)) {\n                newfile <- paste(mypath, myfiles[i], sep=\"/\")\n                mytempdata <- read.csv(newfile, head=TRUE)\n                cmpCase <- sum(complete.cases(mytempdata))\n                if (cmpCase > threshold){\n                        forcompute <- na.omit(mytempdata)\n                        forcompute2 <- forcompute[,2:3]\n                        corrAnswer <- c(corrAnswer, cor(forcompute2[,1] , forcompute2[,2]))\n                }\n                rm(mytempdata)        \n        }\n        return(corrAnswer)\n}",
+    "created" : 1410598355952.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1058613280",
+    "id" : "FA34EBD6",
+    "lastKnownWriteTime" : 1410604078,
+    "path" : "C:/Users/Tuang/Desktop/Coursera/corr.R",
+    "project_path" : "corr.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : true,
+    "type" : "r_source"
+}
